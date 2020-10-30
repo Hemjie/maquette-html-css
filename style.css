@@ -1,0 +1,282 @@
+/*Utiliser une police personnalisée */
+@font-face {
+    font-family: 'Ballpark';
+    src: url(fonts/ballpark.eot) format('embedded-opentype'),
+         url(fonts/ballpark.woff) format('woff'),
+         url(fonts/ballpark.ttf) format('truetype'),
+         url(fonts/ballpark.svg) format('svg');
+}
+
+body {
+    background-image: url(bg.png);
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.page {
+    margin: auto;
+    width: 1000px;
+}
+
+.header {
+    height: 100px;
+}
+
+.logo {
+    font-family: 'Ballpark', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 15px 0;
+}
+
+.menu {
+    font-family: 'Trebuchet MS';
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.logo, .menu {
+    float: left;
+    width: 500px;
+    
+}
+
+.clear {
+    clear: both;
+}
+
+ul {
+    margin: 0;
+    padding-top: 0;
+}
+
+nav li {
+    display: inline;
+    padding-left: 0;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    padding: 15px 10px;
+}
+
+.menu ul li a:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transition: 1s;
+}
+
+.line {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    border-top: 2px solid grey;
+    width: 100%;
+}
+
+.hero {
+    background-image: url(new-york.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 1000px;
+    height: 250px;
+    position: relative;
+    border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 0 4px 4px 0 grey;
+}
+
+.filter {
+    background-color: #000000;
+    opacity: 0.3;
+    width: 1000px;
+    height: 250px;
+    position: absolute;
+    top: 0px;
+    border-radius: 5px 5px 0 5px;
+}
+
+.hero p {
+    position: absolute;
+    top: 90px;
+    left: 415px;
+}
+
+.hero a {
+    text-decoration: none;
+    color: #ffffff;
+    position: absolute;
+    left: 450px;
+    top: 145px;
+    background-color: #000000;
+    padding: 5px 10px;
+    border-radius: 3px;
+
+}
+
+.hero a:hover {
+    background-color: transparent;
+    border: 2px solid #000;
+    transition: 0.5s;
+}
+
+main p {
+    text-align: justify;
+}
+
+article, aside {
+    float: left;
+}
+
+article {
+    width: 680px;
+    margin-right: 20px;
+}
+
+aside {
+    position: relative;
+    width: 260px;
+    background-color: #706b64;
+    padding: 0 20px;
+    border-radius: 0 0 3px 3px;
+    color: #ffffff;
+    box-shadow: 0 1px 4px 0 #000000;
+}
+
+aside h2 {
+    text-align: center;
+}
+
+aside h2 + img {
+    width: 65px;
+    padding: 0;
+    margin: 0 85px;
+    border: 2px solid #000000;
+}
+
+aside div + img{
+    position: absolute;
+    top: 105px;
+    left: -11px;
+}
+
+.sprite {
+    background-image: url(sprite.png);
+    background-size: 280px 81px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 40px;
+    transition: 0.5s;
+}
+
+.sprite span {
+    display: none;
+    /*visibility: hidden on peut utiliser l'un ou l'autre*/
+}
+
+.sprite:hover {
+    background-position-y: 40px;
+}
+
+.twitter {
+    background-position: -40px 0;
+}
+
+.youtube {
+    background-position: -80px 0;
+}
+
+.instagram {
+    background-position: -120px 0;
+}
+
+.line2 {
+    position: relative;
+    border-top: 3px solid #000000;
+    width: 1005px;
+}
+
+/* autre façon de faire le line2 
+footer:before {
+    content: ' ';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #000000;
+    
+}
+footer {
+    position: relative;
+    margin-top: 20px;
+} */
+
+footer {
+    position: absolute;
+    top: 770px;
+    margin-bottom: 100px;
+}
+
+.tweet, .photos, .friends {
+    float: left;
+    width: 350px;
+    /* si responsive, préférer width: 33% */
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif ;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.photos {
+    position: absolute;
+    left: 350px;
+}
+
+.friends {
+    position: absolute;
+    left: 678px;
+}
+
+.friends ul li a{
+    text-decoration: none;
+    color: maroon;
+}
+
+.friends ul {
+    margin-left: -40px;
+    /* margin: 0px;
+    padding: 0;
+    width: 50%; */
+    list-style-image: url(liststyle.png);
+}
+
+.friends ul:last-child {
+    position: absolute;
+    top: 48px;
+    left: 157px;
+}
+
+/*
+flèche de la bordure en CSS 
+#triangle-code{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 7px solid transparent;
+    border-right : 11px solid #706b64;
+    border-bottom : 7px solid transparent;
+    position: absolute;
+    left: -11px;
+    top: 150px;
+    ombre sur une forme définie
+    filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, .5));
+   }
+*/
+
+
